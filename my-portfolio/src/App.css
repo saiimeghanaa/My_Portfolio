@@ -1,42 +1,293 @@
-#root {
+/* ==== Light Theme (Default) ==== */
+:root {
+  --background: #f6f6ff;
+  --foreground: #232340;
+  --primary: #7b5cff;
+  --primary-gradient: linear-gradient(90deg, #7b5cff 0%, #a78bfa 100%);
+  --button-bg: #7b5cff;
+  --button-bg-gradient: linear-gradient(90deg, #7b5cff 0%, #a78bfa 100%);
+  --button-border: #7b5cff;
+  --card-bg: #fff;
+  --shadow: 0 4px 24px rgba(160,100,255,0.09);
+  --radius: 16px;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
+  --icon: #6e60db;
+}
+
+/* ==== Dark Theme ==== */
+body.dark {
+  --background: #18152b;
+  --foreground: #f6f6ff;
+  --card-bg: #221b3a;
+  --primary: #b497ff;
+  --primary-gradient: linear-gradient(90deg, #a78bfa 0%, #7b5cff 100%);
+  --button-bg: #7b5cff;
+  --button-bg-gradient: linear-gradient(90deg, #a78bfa 0%, #7b5cff 100%);
+  --button-border: #a78bfa;
+  --shadow: 0 4px 24px rgba(160,100,255,0.18);
+  --icon: #b497ff;
+}
+
+/* ==== Base & Typography ==== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', Arial, sans-serif;
+  transition: var(--transition);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Inter', Arial, sans-serif;
+  color: var(--foreground);
+  font-weight: 700;
+}
+
+/* ==== Navbar ==== */
+.navbar {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--foreground);
+  padding: 1.5rem 2rem;
+  margin: 2rem auto 0 auto;
   max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: var(--foreground);
+  margin-left: 2rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+  color: var(--primary);
+}
+
+.theme-toggle-btn {
+  /* Style your theme toggle button here if needed */
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary);
+  margin-left: 1.5rem;
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+/* ==== Hero Section ==== */
+.hero {
+  padding: 5em 1em 3em 1em;
+  background: radial-gradient(circle at 60% 200px, #e5e0fb 40%, transparent 100%);
+  border-radius: var(--radius);
+  margin: 2em auto 0 auto;
+  max-width: 1280px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+body.dark .hero {
+  background: radial-gradient(circle at 60% 200px, #221b3a 30%, #18152b 95%);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  color: #7e7f8a;
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+/* ==== Buttons ==== */
+.button-primary {
+  background: var(--button-bg-gradient);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 1em 2em;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: var(--transition);
+}
+
+.button-primary:hover {
+  opacity: 0.93;
+}
+
+.button-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--button-border);
+  border-radius: var(--radius);
+  padding: 1em 2em;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.button-outline:hover {
+  background: #f4f2fc;
+}
+
+body.dark .button-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--button-border);
+}
+
+body.dark .button-outline:hover {
+  background: rgba(172, 148, 255, 0.07);
+}
+
+/* ==== Icons Section ==== */
+.icons {
+  margin: 2em 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+.icons svg {
+  width: 2em;
+  height: 2em;
+  fill: var(--icon);
+  transition: fill 0.2s;
+}
+
+.icons svg:hover {
+  fill: var(--primary);
+}
+
+/* ==== Footer ==== */
+.footer {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  text-align: center;
+  padding: 1.5em 0;
+  color: var(--foreground);
+  margin: 3em auto 0 auto;
+  max-width: 1280px;
+  box-shadow: var(--shadow);
+}
+
+/* ==== Cards (for future sections) ==== */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2em;
+  margin-bottom: 1.5em;
+  transition: var(--transition);
+}
+
+/* ==== Container ==== */
+.container {
+  max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ==== Responsive ==== */
+@media (max-width: 650px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar-links {
+    gap: 1em;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .button-primary, .button-outline {
+    font-size: 1rem;
+    padding: 0.75em 1em;
+    margin: 0.5em 0.2em 0.5em 0.2em;
+  }
+  .hero {
+    padding: 3em 0.5em 2em 0.5em;
+  }
+  .container {
+    padding: 1em;
+  }
+  .icons {
+    gap: 1em;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+/* usage */
+/*  */
+/* useEffect(() => {
+  document.body.classList.toggle('dark', theme === 'dark');
+}, [theme]); */
+/* 
+<nav className="navbar">
+  <div className="navbar-logo">Portfolio</div>
+  <div className="navbar-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    {/* ... */
+  /* </div>
+  <button className="theme-toggle-btn">🌗</button>
+</nav>
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+<section className="hero">
+  <div className="hero-subtitle">Hello, I'm</div>
+  <div className="hero-title">Alex Johnson</div>
+  <div className="hero-subtitle">Full Stack Developer</div>
+  <div className="hero-description">I create beautiful, responsive web applications with modern technologies...</div>
+  <button className="button-primary">View My Work</button>
+  <button className="button-outline">Get In Touch</button>
+</section> */ 
