@@ -1,11 +1,39 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [data,setData] = useState([])
 
+  // useEffect(() => {
+  //   ApiCall();
+  //   console.log('one-----');
+  // },[])
+
+  // useEffect(()=>{
+  //   ApiCall();
+  //   console.log('two-----');
+
+  // })
+
+  useEffect(() => {
+    ApiCall();
+    console.log('three-----');
+  },[data])
+
+
+  const ApiCall = () => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(json => {
+        // setData(json);
+        // console.log(json);
+        // console.log('data---->',data)
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  }
   return (
     <>
       <div>
