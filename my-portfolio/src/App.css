@@ -1,17 +1,18 @@
 /* ==== Light Theme (Default) ==== */
 :root {
-  --background: #f6f6ff;
-  --foreground: #232340;
-  --primary: #7b5cff;
-  --primary-gradient: linear-gradient(90deg, #7b5cff 0%, #a78bfa 100%);
+  /* global theme variables*/
+  --background: #f6f6ff;/* page background */
+  --foreground: #232340;/* main text color */
+  --primary: #7b5cff;/* main brand color*/
+  --primary-gradient: linear-gradient(90deg, #7b5cff 0%, #a78bfa 100%);/* gradient(90 degrees) for primary elements */
   --button-bg: #7b5cff;
   --button-bg-gradient: linear-gradient(90deg, #7b5cff 0%, #a78bfa 100%);
   --button-border: #7b5cff;
   --card-bg: #fff;
   --shadow: 0 4px 24px rgba(160,100,255,0.09);
-  --radius: 16px;
-  --transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
-  --icon: #6e60db;
+  --radius: 16px; /* for rounded corners*/
+  --transition: all 0.25s cubic-bezier(0.4, 0, 1, 1); /* smooth animations - control animation speed  */
+  --icon: #6e60db; /* default icon color */
 }
 
 /* ==== Dark Theme ==== */
@@ -20,7 +21,7 @@ body.dark {
   --foreground: #f6f6ff;
   --card-bg: #221b3a;
   --primary: #b497ff;
-  --primary-gradient: linear-gradient(90deg, #a78bfa 0%, #7b5cff 100%);
+  --primary-gradient: linear-gradient(90deg, #a78bfa 0%, #7b5cff 100%); /* gradient reversed for dark theme */
   --button-bg: #7b5cff;
   --button-bg-gradient: linear-gradient(90deg, #a78bfa 0%, #7b5cff 100%);
   --button-border: #a78bfa;
@@ -30,21 +31,21 @@ body.dark {
 
 /* ==== Base & Typography ==== */
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* ensures padding and border are included in element's total width and height */
   margin: 0;
   padding: 0;
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100vh;  /* ensures body covers full viewport height */
   background: var(--background);
   color: var(--foreground);
   font-family: 'Inter', Arial, sans-serif;
-  transition: var(--transition);
+  transition: var(--transition);/*using the global transition variable for smooth changes */
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* smooth scrolling for anchor links */
 }
 
 h1, h2, h3, h4 {
@@ -62,8 +63,8 @@ h1, h2, h3, h4 {
   padding: 1.5rem 2rem;
   margin: 2rem auto 0 auto;
   max-width: 1280px;
-  display: flex;
-  justify-content: space-between;
+  display: flex; /
+  justify-content: space-between; /* space between logo and links */
   align-items: center;
 }
 
@@ -105,7 +106,7 @@ h1, h2, h3, h4 {
 
 /* ==== Hero Section ==== */
 .hero {
-  padding: 5em 1em 3em 1em;
+  padding: 5em 1em 3em 1em; /* top, right, bottom, left padding 1em = font size of current elements parent  */
   background: radial-gradient(circle at 60% 200px, #e5e0fb 40%, transparent 100%);
   border-radius: var(--radius);
   margin: 2em auto 0 auto;
@@ -119,7 +120,7 @@ body.dark .hero {
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 3rem;/* rem = font size of root element  */
   font-weight: bold;
   margin-bottom: 0.2em;
   background: var(--primary-gradient);
