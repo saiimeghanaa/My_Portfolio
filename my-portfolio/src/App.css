@@ -60,7 +60,7 @@ h1, h2, h3, h4 {
   box-shadow: var(--shadow);
   color: var(--foreground);
   padding: 1.5rem 2rem;
-  margin: 2rem auto 0 auto;
+  margin: 0;
   max-width: 1280px;
   display: flex;
   justify-content: space-between;
@@ -77,10 +77,11 @@ h1, h2, h3, h4 {
 .navbar-links {
   display: flex;
   align-items: center;
+  
 }
 
 .navbar-links a {
-  color: var(--foreground);
+  color: #7e7f8a;
   margin-left: 2rem;
   text-decoration: none;
   font-size: 1.1rem;
