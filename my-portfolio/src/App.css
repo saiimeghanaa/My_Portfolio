@@ -63,7 +63,7 @@ h1, h2, h3, h4 {
   padding: 1.5rem 2rem;
   margin: 2rem auto 0 auto;
   max-width: 1280px;
-  display: flex; /
+  display: flex; 
   justify-content: space-between; /* space between logo and links */
   align-items: center;
 }
@@ -242,6 +242,7 @@ body.dark .button-outline:hover {
     flex-direction: column;
     gap: 1em;
     padding: 1em;
+    content: center;
   }
   .navbar-links {
     gap: 1em;
