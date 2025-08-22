@@ -9,7 +9,7 @@
   --button-border: #7b5cff;
   --card-bg: #fff;
   --shadow: 0 4px 24px rgba(160,100,255,0.09);
-  --radius: 16px;
+  --radius: 0;
   --transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
   --icon: #6e60db;
 }
@@ -60,7 +60,7 @@ h1, h2, h3, h4 {
   box-shadow: var(--shadow);
   color: var(--foreground);
   padding: 1.5rem 2rem;
-  margin: 0;
+  margin: 0; /* changed to 0 as i did not want the curver*/
   max-width: 1280px;
   display: flex;
   justify-content: space-between;
@@ -93,23 +93,24 @@ h1, h2, h3, h4 {
   color: var(--primary);
 }
 
-.theme-toggle-btn {
-  /* Style your theme toggle button here if needed */
-  background: none;
+/* .theme-toggle-btn {
+  Style your theme toggle button here if needed
+  background:none;
   border: none;
   cursor: pointer;
   color: var(--primary);
   margin-left: 1.5rem;
   font-size: 1.5rem;
   transition: color 0.2s;
-}
+} */
 
 /* ==== Hero Section ==== */
 .hero {
   padding: 5em 1em 3em 1em;
   background: radial-gradient(circle at 60% 200px, #e5e0fb 40%, transparent 100%);
+  /* background: red; */
   border-radius: var(--radius);
-  margin: 2em auto 0 auto;
+  /* margin: 2em auto 0 auto; */
   max-width: 1280px;
   text-align: center;
   box-shadow: var(--shadow);
