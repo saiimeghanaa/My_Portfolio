@@ -6,8 +6,10 @@ export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
-    document.body.className = theme === "dark" ? "dark" : "light";
+    //default code theme code changed from "light" to ""
+    document.body.className = theme === "dark" ? "dark" : "";
   }, [theme]);
+
 
   const ToggleTheme = () => {
     //setTheme(theme === "dark" ? "light" : "dark");
