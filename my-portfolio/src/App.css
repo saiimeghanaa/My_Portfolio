@@ -9,7 +9,7 @@
   --button-border: #7b5cff;
   --card-bg: #fff;
   --shadow: 0 4px 24px rgba(160,100,255,0.09);
-  --radius: 0;
+  --radius: 10px;
   --transition: all 0.25s cubic-bezier(0.4, 0, 1, 1);
   --icon: #6e60db;
 }
@@ -93,16 +93,24 @@ h1, h2, h3, h4 {
   color: var(--primary);
 }
 
-/* .theme-toggle-btn {
-  Style your theme toggle button here if needed
-  background:none;
-  border: none;
+.theme-toggle-btn {
+  /* Style your theme toggle button here if needed */
+  background: #f2eded;
+  border: 20px;
+  border-width: 2px;
+  padding: 8px;
+  height: 2.5rem;
+  width: 2.5rem;
+  align-items: center;
+  /* border-color: red; */
+  border-radius: 14px;
+  box-shadow: var(--shadow);
   cursor: pointer;
   color: var(--primary);
   margin-left: 1.5rem;
   font-size: 1.5rem;
   transition: color 0.2s;
-} */
+}
 
 /* ==== Hero Section ==== */
 .hero {
@@ -138,10 +146,18 @@ body.dark .hero {
 }
 
 .hero-description {
-  color: #7e7f8a;
+  color: #8a837e;
   font-size: 1.15rem;
   max-width: 600px;
   margin: 0 auto 2rem auto;
+}
+
+.hero-socials {
+  font-size: 20px;
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
 }
 
 /* ==== Buttons ==== */

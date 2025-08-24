@@ -15,12 +15,10 @@ function Navbar({}) {
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
-        <button className="theme-toggle-button" onClick={ToggleTheme}>
+        <button className="theme-toggle-btn" onClick={ToggleTheme}>
             {
-                theme === 'light' ? 'dark' : 'light'
-            }
-            <LuMoon className="moon-icon" />
-            <LuSun className="sun-icon" />
+                theme === 'light' ? <LuMoon className="moon-icon"/>  : <LuSun className="sun-icon"/> 
+            }  
         </button>
         
         
