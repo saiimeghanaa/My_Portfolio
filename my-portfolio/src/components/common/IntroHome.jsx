@@ -9,7 +9,7 @@ function IntroHome() {
         <div className='hero'>
             <section>
             <p className='hero-description'>Hello, I am</p>
-            <p className='hero-subtitle'>Meghanaa</p>
+            <p className='hero-title'>Meghanaa</p>
             <p className='hero-subtitle'>A Frontend Developer</p>               
             <p className='hero-description'>I design and code beautifully simple things, and I love what I do.</p>
             <button className='button-primary'>View my work </button> 
