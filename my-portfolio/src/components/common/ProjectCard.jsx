@@ -19,8 +19,8 @@ export default function ProjectCard(){
                 <span className="tag">CSS</span>
             </div>
             <div className="project-links">
-                <a href="https://github.com/saiimeghanaa/My_Portfolio"><LuGithub/>Code</a>
-                <a href=""><LuSquareArrowOutUpRight/>Live Demo</a>
+                <a href="https://github.com/saiimeghanaa/My_Portfolio"><LuGithub/><span className="link-space">Code</span></a>
+                <a href=""><LuSquareArrowOutUpRight/><span className="link-space"> Live Demo</span></a>
             </div>
         </div>
     );
