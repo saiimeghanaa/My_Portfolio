@@ -1,7 +1,6 @@
 import React from 'react';
-import { LuGithub } from "react-icons/lu";
-import { LuLinkedin } from "react-icons/lu";
-import { LuMail } from "react-icons/lu";
+import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
+
 
 
 function IntroHome() {

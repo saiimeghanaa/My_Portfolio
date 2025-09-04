@@ -141,10 +141,18 @@ body.dark .hero {
 }
 
 .hero-subtitle {
-  color: var(--primary);
+  /* color: var(--primary);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem; */
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  /* background: linear-gradient(90deg, #9750ad 0%, #d5b6ee 100%); */
+  background: linear-gradient(90deg, #6f3bf2 0%, #d3bfff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-description {
@@ -289,15 +297,27 @@ body.dark .button-outline:hover {
   }
   .hero-title {
     font-size: 2rem;
+    
   }
   .hero-subtitle {
-    font-size: 1.2rem;
+  font-size: 2rem;
+    
   }
-  .button-primary, .button-outline {
+  .button-primary {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+.button-primary:hover {
+  opacity: 0.9;
+}
+
+
+  /* .button-primary, .button-outline {
     font-size: 1rem;
     padding: 0.75em 1em;
     margin: 0.5em 0.2em 0.5em 0.2em;
-  }
+  } */
   .hero {
     padding: 3em 0.5em 2em 0.5em;
   }
@@ -716,6 +736,129 @@ body.dark .button-outline:hover {
   font-weight: 500;      /* optional: make label a bit bolder */
   color: var(--foreground); 
 }
+
+
+
+/* ------------------- FOOTER ------------------------- */
+
+.footer {
+  background: linear-gradient(180deg, #1d1d2e, #161623);
+  color: #fff;
+  padding: 3rem 1rem 1rem;
+  font-family: 'Inter', sans-serif;
+  border-radius: 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left,
+.footer-links,
+.footer-contact {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-left h3 {
+  color: #9f79ff;
+  margin-bottom: 0.5rem;
+}
+
+.footer-left p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+  font-size: 1.2rem;
+  color: #ccc;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #9f79ff;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #9f79ff;
+}
+
+.footer-contact p {
+  margin: 0.4rem 0;
+  color: #ccc;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #aaa;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  max-width: 1200px;
+  margin: 2rem auto 0; /* combined top margin and auto centering */
+}
+
+.footer-bottom .back-to-top {
+  color: #9f79ff;
+  text-decoration: none;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;         /* circle width */
+  height: 40px;        /* circle height */
+  border-radius: 25%;  /* make it circular */
+  background-color: #333; /* dark background, change as needed */
+  color: #fff;          /* icon color */
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* .social-icon:hover {
+  background-color: #9f79ff; 
+  transform: scale(1.1);     
+} */
+
 /* usage */
 /*  */
 /* useEffect(() => {
