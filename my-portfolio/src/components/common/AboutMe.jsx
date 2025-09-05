@@ -12,14 +12,14 @@ export default function AboutMe() {
     "Bootstrap",
   ];
   return (
-    <div className="about-container">
+    <div className="about-container" id="about">
       <div className="about-header">
         <h1>
           About <span className="highlight">Me</span>
         </h1>
         <p className="about-paragraph">
-          Passionate developer with 5+ years of experience creating digital
-          solutions that make a difference.
+          I’m a budding web developer learning React, JavaScript,
+          HTML and CSS, and love creating simple, responsive websites.
         </p>
       </div>
 

@@ -7,15 +7,15 @@ function Footer() {
     <div className="footer-container">
         {/* Left Section */}
         <div className="footer-left">
-        <h3>Alex Johnson</h3>
+        <h3>Saii Meghanaa Penumetsa</h3>
         <p>
-            Full Stack Developer passionate about creating beautiful, functional, 
+            Frontend Developer passionate about creating beautiful, functional, 
             and user-friendly web applications. Let's build something amazing together.
         </p>
         <div className="footer-socials">
-                <a href="#" className="social-icon"><LuGithub /></a>
-                <a href="#" className="social-icon"><LuLinkedin /></a>
-                <a href="#" className="social-icon"><LuMail /></a>
+                <a href="https://github.com/saiimeghanaa" target= "_blank" rel="noopener noreferrer" className="social-icon"><LuGithub /></a>
+                <a href="https://www.linkedin.com/in/meghapenumetsa" target= "_blank" rel="noopener noreferrer" className="social-icon"><LuLinkedin /></a>
+                <a href="mailto:saiimeghanaa9@gmail.com" target="_blank" rel="noopener noreferrer" className="social-icon"><LuMail /></a>
         </div>
         </div>
 
@@ -33,14 +33,14 @@ function Footer() {
         {/* Right Section */}
         <div className="footer-contact">
         <h4>Get In Touch</h4>
-        <p>alex.johnson@email.com</p>
-        <p>+1 (555) 123-4567</p>
-        <p>San Francisco, CA</p>
+        <p>saiimeghanaa9@email.com</p>
+        <p>+91 9533633636</p>
+        <p>Visakhapatnam, AP</p>
         </div>
     </div>
 
     <div className="footer-bottom">
-        <p>© 2025 Alex Johnson. Made with ❤️ in San Francisco</p>
+        <p>© 2025 Saii Meghanaa. Made with ❤️ in Visakhapatnam</p>
         <a href="#top" className="back-to-top">Back to top ↑</a>
     </div>
 </footer>

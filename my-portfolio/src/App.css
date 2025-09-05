@@ -149,7 +149,7 @@ body.dark .hero {
   font-weight: 600;
   margin-bottom: 1rem;
   /* background: linear-gradient(90deg, #9750ad 0%, #d5b6ee 100%); */
-  background: linear-gradient(90deg, #6f3bf2 0%, #d3bfff 100%);
+  background: linear-gradient(90deg, #9b77f5 0%, #d3bfff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -168,6 +168,15 @@ body.dark .hero {
   display: flex;
   justify-content: center;
   gap: 2em;
+  
+}
+.hero-socials a svg {
+  color: var(--icon);          /* ensures all icons use the same color */
+  transition: color 0.3s;
+}
+
+.hero-socials a:hover svg {
+  color: var(--primary);       /* optional hover effect */
 }
 
 /* ==== Buttons ==== */
@@ -235,22 +244,24 @@ body.dark .button-outline:hover {
 }
 
 .card-icon{
-   background: #f2eded;
-  border: 20px;
-  border-width: 2px;
-  padding: 8px;
+ 
+  /* color: #1054b3;  */
+  background: #f2eded;
+  border: 2px solid transparent; /* corrected border */
+  padding: 0.5rem;               /* smaller padding inside icon circle */
   height: 2.5rem;
   width: 2.5rem;
-  align-items: center;
-  text-align: center;
-  /* border-color: red; */
-  border-radius: 14px;
+  display: flex;
+  align-items: center;           /* vertically center icon inside circle */
+  justify-content: center;       /* horizontally center icon */
+  border-radius: 25%;            /* make circle */
   box-shadow: var(--shadow);
   cursor: pointer;
   color: var(--primary);
-  margin-left: 1.5rem;
   font-size: 1.5rem;
   transition: color 0.2s;
+  margin: 0;                     /* remove extra left margin */
+
 }
 
 /* ==== Footer ==== */
@@ -269,7 +280,7 @@ body.dark .button-outline:hover {
 .card {
   background: var(--card-bg);
   border-radius: 20px;
-  box-shadow: var(--shadow);
+  /* box-shadow: var(--shadow); */
   padding: 1rem;
   /* margin-bottom: 1.5em; */
   transition: var(--transition);
@@ -374,18 +385,28 @@ body.dark .button-outline:hover {
   flex: 1 1 45%; 
   display: grid;
   /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
-  gap: 1rem;
+  gap: 2rem;
   align-items: top; 
   border-radius: 20px;
+  padding:0.5rem;
+  grid-template-columns: 1fr; 
   
 }
 .card-text{
-  text-align: auto;
+  text-align: left;      /* ensures text is left-aligned */
   color: #8a837e;
+  margin-top: 0.5rem;    /* adds some space between title and text */
+  line-height: 1.5; 
 }
 
 .card-main{
-   width:18rem;
+  width:18rem;
+  padding: 1.5rem;          /* adds space inside the card */
+  border-radius: 12px;      /* optional: rounded corners */
+  box-shadow: none;         /* remove shadow if you want */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .card-header{
@@ -393,6 +414,13 @@ body.dark .button-outline:hover {
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
+}
+
+.card-header .card-title {
+  font-weight: 700;        /* bold */
+  font-size: 1.1rem;       /* adjust size */
+  color: var(--foreground);/* matches your theme */
+  margin: 0;               /* remove extra spacing */
 }
 
 /* Optional: style headings */
@@ -436,6 +464,7 @@ body.dark .button-outline:hover {
     flex: 1 1 100%;
     text-align: center;
   }
+  
 }
 
 /* Projects section */
@@ -504,11 +533,13 @@ body.dark .button-outline:hover {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  text-align:left;
 }
 .project-desc{
   color: #8a837e;
   font-size: 1rem;
   margin-bottom: 1rem;
+  text-align:left;
 }
 .project-tags {
   display: flex;
@@ -547,6 +578,16 @@ body.dark .button-outline:hover {
   margin-left: 5px;
 }
 
+/* Dark mode override */
+body.dark .project-links a {
+  color: #ddd; /* lighter color for visibility on dark bg */
+}
+
+body.dark .project-links a:hover {
+  color: #9f79ff; /* brighter purple for hover in dark mode */
+}
+
+
 /* ------------------------ Contact Section ------------------------ */
 
 .contact-container{
@@ -560,8 +601,8 @@ body.dark .button-outline:hover {
 
  .contact-title {
   text-align: center;
-  margin-bottom: 3rem;  
-  padding-bottom: 10px;
+  margin-bottom: 1rem;  
+  /* padding-bottom: 5px; */
  }
 
  .contact-title .highlight {
@@ -615,8 +656,15 @@ body.dark .button-outline:hover {
   padding: 1rem ;
   border-radius: 12px;
   margin-bottom: 20px;
+  /* margin: 0.8rem 0; */
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
  }
+.contact-box-margin {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;       /* spacing between each box */
+  margin-top: 1.5rem;  /* spacing from the paragraph above */
+}
 
 
 .contact-icon {
@@ -627,6 +675,7 @@ body.dark .button-outline:hover {
 .box-title {
   font-weight: 600;
   margin-bottom: 0.25rem;
+  color: var(--foreground);
 }
 
 .box-info {
@@ -649,7 +698,29 @@ body.dark .button-outline:hover {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  font-family: 'Inter', Arial, sans-serif; /* change to any font you want */
+  font-size: 1rem;                          /* adjust size */
+  color: #888;                              /* placeholder color */
+
 }
+/* You can do the same for input placeholders */
+/* Style for all inputs and textarea text */
+.contact-form input,
+.contact-form textarea {
+  font-family: 'Inter', Arial, sans-serif; /* make text match */
+  font-size: 1rem;
+  color: var(--foreground);
+}
+
+/* Style for placeholder text */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  font-family: 'Inter', Arial, sans-serif; /* same font as text */
+  font-size: 1rem;                         /* same size */
+  color: #888;                              /* placeholder color */
+  font-style: normal;                       /* optional: normal instead of italic */
+}
+
 
 .form-row{
   display:flex;
@@ -768,12 +839,15 @@ body.dark .button-outline:hover {
 .footer-left h3 {
   color: #9f79ff;
   margin-bottom: 0.5rem;
+  text-align: left;
+
 }
 
 .footer-left p {
   font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 .footer-socials {
@@ -883,3 +957,43 @@ body.dark .button-outline:hover {
   <button className="button-primary">View My Work</button>
   <button className="button-outline">Get In Touch</button>
 </section> */ 
+
+
+
+
+
+/* ---------------- Dark mode overrides for contact section ---------------- */
+body.dark .contact-box {
+  background: #2a2438; /* dark background for cards */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+body.dark .box-title {
+  color: var(--foreground); /* makes titles visible */
+}
+
+body.dark .box-info {
+  color: #ccc; /* lighter color for info text */
+}
+
+body.dark .contact-form {
+  background: #221b3a; /* dark form background */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+  background: #2a2438;  /* dark input background */
+  color: var(--foreground); /* visible text */
+  border: 1px solid #444;  /* subtle border in dark mode */
+}
+
+body.dark .contact-form input::placeholder,
+body.dark .contact-form textarea::placeholder {
+  color: #aaa; /* placeholder color for dark mode */
+}
+
+body.dark .contact-form button {
+  background: var(--button-bg-gradient); /* your existing gradient works */
+  color: #fff;
+}

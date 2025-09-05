@@ -3,7 +3,7 @@ import { LuMail, LuPhone, LuMapPin } from "react-icons/lu";
 
 function Contact(){
     return(
-        <div className="contact-container">
+        <div className="contact-container" id="contact">
             <div className="contact-header">
                 <h1 className="contact-title">
                 Get in <span className="highlight">Touch</span>
@@ -32,7 +32,7 @@ function Contact(){
                         <LuPhone className="contact-icon" />
                         <div>
                             <p className="box-title">Phone</p>
-                            <p className="box-info">+1 (555) 123-4567</p>
+                            <p className="box-info">+91 9533633636</p>
                         </div>
                     </div>
 
@@ -40,12 +40,12 @@ function Contact(){
                         <LuMapPin className="contact-icon" />
                         <div>
                             <p className="box-title">Location</p>
-                            <p className="box-info">San Francisco, CA</p>
+                            <p className="box-info">Visakhapatnam, AP</p>
                         </div>
                     </div>
                 </div>
                 </div>
-            <div className="contact-card">
+            {/* <div className="contact-card"> */}
                 <div className= "contact-form">
                     <form>
                         {/* Name and Email row */}
@@ -75,7 +75,7 @@ function Contact(){
                     
                     </form>
                 </div>
-            </div> 
+            {/* </div>  */}
             </div>
 
         </div>

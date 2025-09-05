@@ -2,25 +2,32 @@ import {LuGithub } from "react-icons/lu";
 import { LuSquareArrowOutUpRight } from "react-icons/lu";
 import eCommerce from '../../assets/images/eCommerce.jpg';
 
-export default function ProjectCard(){
+export default function ProjectCard({ image, title, description, tags = [], codeLink, liveLink }){
     return(
         <div className="project-card">
             <div className="project-image">
-                <img src={eCommerce}/>
+                <img src={image}/>
             </div>
             <div className="project-content">
-                <h3 className="project-title">E-Commerce Website</h3>
-                <p className="project-desc">This is an E-Commerce project built with HTML, CSS, JS, REACT, REDUX</p>
+                <h3 className="project-title">{title}</h3>
+                <p className="project-desc">{description}</p>
             </div>
             <div className="project-tags">
-                <span className="tag">React</span>
-                <span className="tag">Redux</span>
-                <span className="tag">JavaScript</span>
-                <span className="tag">CSS</span>
+                {tags.map((tag, index) => (
+                    <span key={index} className="tag">{tag}</span>
+                ))}
             </div>
             <div className="project-links">
-                <a href="https://github.com/saiimeghanaa/My_Portfolio"><LuGithub/><span className="link-space">Code</span></a>
-                <a href=""><LuSquareArrowOutUpRight/><span className="link-space"> Live Demo</span></a>
+                {codeLink && (
+                    <a href={codeLink} target="_blank" rel="noopener noreferrer">
+                        <LuGithub /><span className="link-space">Code</span>
+                    </a>
+                )}
+                {liveLink && (
+                    <a href={liveLink} target="_blank" rel="noopener noreferrer">
+                        <LuSquareArrowOutUpRight /><span className="link-space">Live Demo</span>
+                    </a>
+                )}
             </div>
         </div>
     );
