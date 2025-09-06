@@ -9,7 +9,7 @@ function Projects() {
             title: "Parallax Website",
             description: "This is a Parallax Website built with HTML, CSS, JS",
             tags: ["HTML", "CSS", "JavaScript"],
-            codeLink: "https://github.com/saiimeghanaa/My_Portfolio",
+            codeLink: "https://github.com/saiimeghanaa/ParallaxWebsite",
             liveLink: "file:///C:/Users/Meghanaa/Desktop/Frontend_Projects/ParallaxWebsite/index.html"
         },
         {
@@ -18,7 +18,7 @@ function Projects() {
             description: "My personal portfolio built with React and modern CSS",
             tags: ["React", "CSS", "JavaScript"],
             codeLink: "https://github.com/saiimeghanaa/Portfolio",
-            liveLink: "http://localhost:5173/contact#home"
+            liveLink: "https://rococo-empanada-7dc67f.netlify.app"
         }
     ];
 
